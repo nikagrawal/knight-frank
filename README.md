@@ -25,7 +25,7 @@ A secure, multi-user Net Promoter Score (NPS) survey platform built with React a
 
 ### 📊 Dashboard (User-Specific)
 - NPS Score, Promoters/Passives/Detractors, response count.
-- Filters: Date range, campaign dropdown, comment search.
+- Filters: Date range, campaign dropdown.
 - Visualizations:
   - Bar chart (breakdown of respondent types).
   - Line chart (NPS trend over time).
@@ -35,8 +35,7 @@ A secure, multi-user Net Promoter Score (NPS) survey platform built with React a
 ## 🚀 Tech Stack
 
 - **Frontend**: React, Bootstrap, Chart.js, Axios  
-- **Backend**: Django, DRF, PostgreSQL, SimpleJWT  
-- **Deployment**: Gunicorn, Nginx, Ubuntu  
+- **Backend**: Django, DRF, PostgreSQL, SimpleJWT   
 - **Tools**: Python 3.13, Node.js, Git
 
 ---
@@ -57,13 +56,6 @@ cd nps-survey/backend
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
-
-# PostgreSQL Setup
-sudo -u postgres psql
-CREATE DATABASE nps_survey;
-CREATE USER nps_user WITH PASSWORD 'securepassword';
-GRANT ALL PRIVILEGES ON DATABASE nps_survey TO nps_user;
-\q
 
 # .env
 SECRET_KEY=your-secret-key
