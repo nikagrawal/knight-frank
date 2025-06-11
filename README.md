@@ -66,3 +66,50 @@ DATABASE_URL=postgresql://nps_user:securepassword@localhost:5432/nps_survey
 python manage.py migrate
 python manage.py runserver
 
+
+
+## Setup Instructions
+
+1. Open a terminal and go to the frontend folder:
+
+   ```bash
+   cd frontend/nps-survey-frontend
+   ```
+
+2. Install all required packages:
+
+   ```bash
+   npm install
+   ```
+
+3. Create a `.env` file in the root folder and add this line:
+
+   ```env
+   REACT_APP_API_URL=http://127.0.0.1:8000/api/
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm start
+   ```
+
+5. Visit the app in your browser:
+
+   ```
+   http://localhost:3000
+   ```
+
+## Build for Production
+
+```bash
+npm run build
+```
+
+## Notes
+
+* Make sure the Django backend is running at the API URL.
+* JWT is stored in `localStorage` and added to requests via `api.js`.
+* Only active, unresponded links can be shared.
+* All data is user-specific; no customer personal info is stored.
+
